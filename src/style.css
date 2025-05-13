@@ -1,0 +1,26 @@
+/* === Reset mínimo === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #f3f4f6;          /* cinza-claro */
+  --panel: #ffffff;
+  --accent: #2563eb;      /* azul suave */
+  --accent-dark: #1e40af;
+  --green: #16a34a;
+  --red: #dc2626;
+  --yellow: #facc15;
+  --text: #111827;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+
+a { color: var(--accent); text-decoration: none; }
