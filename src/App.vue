@@ -15,9 +15,9 @@ import { computed } from 'vue';
 
 const store = useTransactions();
 const formattedBalance = computed(() =>
-  store.currentBalance.toLocaleString('en-US', {
+  store.currentBalance.toLocaleString('pt-BR', {
     style: 'currency',
-    currency: 'USD'
+    currency: 'BRL'
   })
 );
 </script>

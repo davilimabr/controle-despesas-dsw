@@ -27,7 +27,7 @@
   );
   
   function formatted(n) {
-    return n.toLocaleString('en-US',{style:'currency',currency:'USD'});
+    return n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
   }
   
   const rowClass = computed(() => (props.tx.amount>=0?'credit':'debit'));
