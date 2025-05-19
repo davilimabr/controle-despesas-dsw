@@ -1,6 +1,7 @@
 <template>
   <main class="container">
     <h1>Controle de Gastos</h1>
+    <p>Saldo Atual: {{ formattedBalance }}</p>
     <TransactionForm />
     <TransactionList />
   </main>
@@ -9,6 +10,16 @@
 <script setup>
 import TransactionForm from './components/TransactionForm.vue';
 import TransactionList from './components/TransactionList.vue';
+import { useTransactions } from './store/useTransactions';
+import { computed } from 'vue';
+
+const store = useTransactions();
+const formattedBalance = computed(() =>
+  store.currentBalance.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  })
+);
 </script>
 
 <style>

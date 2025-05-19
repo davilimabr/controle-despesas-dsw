@@ -13,7 +13,8 @@ export const useTransactions = defineStore('transactions', {
         running += t.amount;
         return { ...t, balance: running };
       });
-    }
+    },
+    currentBalance: (s) => s.items.reduce((sum, t) => sum + t.amount, 0)
   },
   actions: {
     add(description, amount) {

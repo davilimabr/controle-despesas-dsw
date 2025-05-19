@@ -15,6 +15,10 @@
   const amount = ref(null);
   
   function submit() {
+    if (amount.value === 0 || amount.value === null) {
+      alert('O valor deve ser diferente de zero.');
+      return;
+    }
     store.add(desc.value, amount.value);
     desc.value = ''; amount.value = null;
   }
